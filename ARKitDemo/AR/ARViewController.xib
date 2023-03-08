@@ -2,18 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARViewController" customModule="XiaoiceIsland_App_IOS" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARViewController" customModule="ARKitDemo" customModuleProvider="target">
             <connections>
                 <outlet property="addBtn" destination="5Pa-79-prO" id="KtP-IZ-JZI"/>
-                <outlet property="inputTextView" destination="shL-Eh-Otk" id="pov-8z-BP3"/>
-                <outlet property="inputTextViewBottomConstraint" destination="RjZ-wr-baK" id="kAb-Oz-g3p"/>
-                <outlet property="inputTextViewWidthConstraint" destination="gRb-Qh-0eZ" id="BAC-3j-sJ9"/>
                 <outlet property="sceneView" destination="e1N-dp-gRq" id="bKW-Y1-ooi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,24 +24,6 @@
                 <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1N-dp-gRq">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </arscnView>
-                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="点这里跟我聊天" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="shL-Eh-Otk">
-                    <rect key="frame" x="24" y="816" width="366" height="40"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="hTR-zb-1Zw"/>
-                    </constraints>
-                    <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="10"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="ATY-b4-iIz"/>
-                    </connections>
-                </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pa-79-prO" userLabel="Add">
                     <rect key="frame" x="127" y="816" width="160" height="40"/>
                     <color key="backgroundColor" red="0.38378366483312076" green="0.52575517511692171" blue="1" alpha="0.32475068553394038" colorSpace="calibratedRGB"/>
@@ -89,13 +69,10 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="e1N-dp-gRq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2ga-X5-8TW"/>
-                <constraint firstItem="shL-Eh-Otk" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Dmx-59-0GG"/>
                 <constraint firstAttribute="bottom" secondItem="5Pa-79-prO" secondAttribute="bottom" constant="40" id="GOa-xx-ccL"/>
-                <constraint firstAttribute="bottom" secondItem="shL-Eh-Otk" secondAttribute="bottom" constant="40" id="RjZ-wr-baK"/>
                 <constraint firstItem="e1N-dp-gRq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YYW-bW-1xq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e1N-dp-gRq" secondAttribute="trailing" id="dBN-XB-ueE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hfy-BW-KdQ" secondAttribute="trailing" constant="20" id="dME-KS-hv2"/>
-                <constraint firstItem="shL-Eh-Otk" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.4" constant="200" id="gRb-Qh-0eZ"/>
                 <constraint firstAttribute="bottom" secondItem="e1N-dp-gRq" secondAttribute="bottom" id="mAe-XD-dgB"/>
                 <constraint firstItem="5Pa-79-prO" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="rN6-hh-1w8"/>
                 <constraint firstItem="Hfy-BW-KdQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="s15-Df-W2p"/>
@@ -104,9 +81,6 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

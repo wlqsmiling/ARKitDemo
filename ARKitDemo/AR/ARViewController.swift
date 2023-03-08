@@ -10,18 +10,10 @@ import SceneKit
 import ARKit
 
 class ARViewController: UIViewController {
-    
-    var character: Islander?
-    
+        
     @IBOutlet var sceneView: ARSCNView!
-    
-    @IBOutlet weak var inputTextView: UITextView!
-    
+        
     @IBOutlet weak var addBtn: UIButton!
-    
-    @IBOutlet weak var inputTextViewBottomConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var inputTextViewWidthConstraint: NSLayoutConstraint!
     
     var animations = [String: CAAnimation]()
     
@@ -56,7 +48,7 @@ class ARViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let name = "放置" + character!.name!
+        let name = "放置"
         self.addBtn.setTitle(name, for: .normal)
         self.addBtn.sizeToFit()
         
@@ -71,10 +63,10 @@ class ARViewController: UIViewController {
         
         loadPeopleNode()
         // Load the DAE animations
-        loadAnimation(withKey: "talking", sceneName: "art.scnassets/Talking", animationIdentifier: "Talking-1")
-        loadAnimation(withKey: "idle", sceneName: "art.scnassets/Orc_Idle", animationIdentifier: "Orc_Idle-1")
-        loadAnimation(withKey: "sing", sceneName: "art.scnassets/Singing", animationIdentifier: "Singing-1")
-        loadAnimation(withKey: "dance", sceneName: "art.scnassets/Breakdance Ending 2", animationIdentifier: "Breakdance Ending 2-1")
+//        loadAnimation(withKey: "talking", sceneName: "art.scnassets/Talking", animationIdentifier: "Talking-1")
+//        loadAnimation(withKey: "idle", sceneName: "art.scnassets/Orc_Idle", animationIdentifier: "Orc_Idle-1")
+//        loadAnimation(withKey: "sing", sceneName: "art.scnassets/Singing", animationIdentifier: "Singing-1")
+//        loadAnimation(withKey: "dance", sceneName: "art.scnassets/Breakdance Ending 2", animationIdentifier: "Breakdance Ending 2-1")
 
         loadVoiceSouces()
         
@@ -83,11 +75,6 @@ class ARViewController: UIViewController {
         sceneView.autoenablesDefaultLighting = true
         
         virtualObjectInteraction.selectedObject = nil
-        
-        
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -112,47 +99,9 @@ class ARViewController: UIViewController {
         sceneView.session.pause()
     }
     
-    
-    @objc func keyboardWillChangeFrame(notification: NSNotification) {
-        guard let userInfo = notification.userInfo else { return }
-        
-        let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
-        let endFrameY = endFrame?.origin.y ?? 0
-        let duration:TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
-        let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
-        let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
-        let animationCurve:UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
-        
-        if endFrameY >= UIScreen.main.bounds.size.height {
-            self.inputTextViewBottomConstraint.constant = 50.0
-            self.inputTextViewWidthConstraint.constant = 0
-        } else {
-            if let height = endFrame?.size.height {
-                self.inputTextView.text = ""
-                self.view.layoutIfNeeded()
-                self.inputTextView.layoutIfNeeded()
-                self.inputTextViewBottomConstraint.constant = height + 10
-                self.inputTextViewWidthConstraint.constant = 200
-                self.inputTextView.textAlignment = .left
-            } else {
-                self.inputTextViewBottomConstraint.constant = 50.0
-                self.inputTextViewWidthConstraint.constant = 0
-            }
-        }
-        
-        UIView.animate(
-            withDuration: duration,
-            delay: TimeInterval(0),
-            options: animationCurve,
-            animations: {
-                self.view.layoutIfNeeded()
-            },
-            completion: nil
-        )
-    }
-    
     private func loadPeopleNode() {
-        let idleScene = SCNScene(named: "art.scnassets/Orc_Idle.dae")!
+        //scn dae
+        let idleScene = SCNScene(named: "art.scnassets/ship.scn")!
         let node = SCNReferenceNode()
         
         node.loadingPolicy = .immediate
@@ -164,7 +113,7 @@ class ARViewController: UIViewController {
         }
         
         // Set up some properties
-        node.scale = SCNVector3(0.001, 0.001, 0.001)
+//        node.scale = SCNVector3(0.001, 0.001, 0.001)
         
         self.peopleNode = node
     }
@@ -300,7 +249,6 @@ class ARViewController: UIViewController {
         if let sender = sender as? UIButton {
             sender.isHidden = true
         }
-        self.inputTextView.isHidden = false
         
         let point = CGPoint(x: self.view.bounds.midX, y: self.view.bounds.midY)
         let query = self.sceneView.raycastQuery(from: point, allowing: .estimatedPlane, alignment: .any)

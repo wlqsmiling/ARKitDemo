@@ -16,6 +16,18 @@
 		048051DA29B85A140011EFC7 /* ARKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048051D929B85A140011EFC7 /* ARKitDemoTests.swift */; };
 		048051E429B85A140011EFC7 /* ARKitDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048051E329B85A140011EFC7 /* ARKitDemoUITests.swift */; };
 		048051E629B85A140011EFC7 /* ARKitDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048051E529B85A140011EFC7 /* ARKitDemoUITestsLaunchTests.swift */; };
+		048051F829B8660A0011EFC7 /* ARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048051F629B866090011EFC7 /* ARViewController.xib */; };
+		048051F929B8660A0011EFC7 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048051F729B8660A0011EFC7 /* ARViewController.swift */; };
+		048051FE29B866150011EFC7 /* ViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048051FA29B866140011EFC7 /* ViewController+ARSCNViewDelegate.swift */; };
+		048051FF29B866150011EFC7 /* ViewController+CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048051FB29B866140011EFC7 /* ViewController+CoachingOverlay.swift */; };
+		0480520029B866150011EFC7 /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048051FC29B866140011EFC7 /* ThresholdPanGesture.swift */; };
+		0480520129B866150011EFC7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048051FD29B866150011EFC7 /* Utilities.swift */; };
+		0480520429B8661D0011EFC7 /* VirtualObjectARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480520229B8661D0011EFC7 /* VirtualObjectARView.swift */; };
+		0480520529B8661D0011EFC7 /* VirtualObjectInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480520329B8661D0011EFC7 /* VirtualObjectInteraction.swift */; };
+		0480520929B866340011EFC7 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480520729B866330011EFC7 /* FocusSquare.swift */; };
+		0480520A29B866340011EFC7 /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480520829B866340011EFC7 /* FocusSquareSegment.swift */; };
+		0480520E29B866520011EFC7 /* VirtualObjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480520C29B866520011EFC7 /* VirtualObjectLoader.swift */; };
+		0480520F29B866520011EFC7 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480520D29B866520011EFC7 /* VirtualObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +60,18 @@
 		048051DF29B85A140011EFC7 /* ARKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		048051E329B85A140011EFC7 /* ARKitDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitDemoUITests.swift; sourceTree = "<group>"; };
 		048051E529B85A140011EFC7 /* ARKitDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		048051F629B866090011EFC7 /* ARViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARViewController.xib; sourceTree = "<group>"; };
+		048051F729B8660A0011EFC7 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		048051FA29B866140011EFC7 /* ViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		048051FB29B866140011EFC7 /* ViewController+CoachingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+CoachingOverlay.swift"; sourceTree = "<group>"; };
+		048051FC29B866140011EFC7 /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
+		048051FD29B866150011EFC7 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		0480520229B8661D0011EFC7 /* VirtualObjectARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectARView.swift; sourceTree = "<group>"; };
+		0480520329B8661D0011EFC7 /* VirtualObjectInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectInteraction.swift; sourceTree = "<group>"; };
+		0480520729B866330011EFC7 /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		0480520829B866340011EFC7 /* FocusSquareSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
+		0480520C29B866520011EFC7 /* VirtualObjectLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectLoader.swift; sourceTree = "<group>"; };
+		0480520D29B866520011EFC7 /* VirtualObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +122,7 @@
 		048051C229B85A110011EFC7 /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				048051F529B865F30011EFC7 /* AR */,
 				048051C329B85A110011EFC7 /* AppDelegate.swift */,
 				048051C529B85A110011EFC7 /* art.scnassets */,
 				048051C729B85A110011EFC7 /* ViewController.swift */,
@@ -123,6 +148,41 @@
 				048051E529B85A140011EFC7 /* ARKitDemoUITestsLaunchTests.swift */,
 			);
 			path = ARKitDemoUITests;
+			sourceTree = "<group>";
+		};
+		048051F529B865F30011EFC7 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				0480520B29B866470011EFC7 /* Virtual Objects */,
+				0480520629B866270011EFC7 /* Focus Square */,
+				048051F729B8660A0011EFC7 /* ARViewController.swift */,
+				048051F629B866090011EFC7 /* ARViewController.xib */,
+				048051FC29B866140011EFC7 /* ThresholdPanGesture.swift */,
+				048051FD29B866150011EFC7 /* Utilities.swift */,
+				048051FA29B866140011EFC7 /* ViewController+ARSCNViewDelegate.swift */,
+				048051FB29B866140011EFC7 /* ViewController+CoachingOverlay.swift */,
+				0480520229B8661D0011EFC7 /* VirtualObjectARView.swift */,
+				0480520329B8661D0011EFC7 /* VirtualObjectInteraction.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		0480520629B866270011EFC7 /* Focus Square */ = {
+			isa = PBXGroup;
+			children = (
+				0480520729B866330011EFC7 /* FocusSquare.swift */,
+				0480520829B866340011EFC7 /* FocusSquareSegment.swift */,
+			);
+			path = "Focus Square";
+			sourceTree = "<group>";
+		};
+		0480520B29B866470011EFC7 /* Virtual Objects */ = {
+			isa = PBXGroup;
+			children = (
+				0480520D29B866520011EFC7 /* VirtualObject.swift */,
+				0480520C29B866520011EFC7 /* VirtualObjectLoader.swift */,
+			);
+			path = "Virtual Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +291,7 @@
 			files = (
 				048051C629B85A110011EFC7 /* art.scnassets in Resources */,
 				048051D029B85A130011EFC7 /* LaunchScreen.storyboard in Resources */,
+				048051F829B8660A0011EFC7 /* ARViewController.xib in Resources */,
 				048051CD29B85A130011EFC7 /* Assets.xcassets in Resources */,
 				048051CB29B85A110011EFC7 /* Main.storyboard in Resources */,
 			);
@@ -257,8 +318,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0480520429B8661D0011EFC7 /* VirtualObjectARView.swift in Sources */,
+				048051FE29B866150011EFC7 /* ViewController+ARSCNViewDelegate.swift in Sources */,
+				048051FF29B866150011EFC7 /* ViewController+CoachingOverlay.swift in Sources */,
+				0480520129B866150011EFC7 /* Utilities.swift in Sources */,
+				048051F929B8660A0011EFC7 /* ARViewController.swift in Sources */,
+				0480520F29B866520011EFC7 /* VirtualObject.swift in Sources */,
+				0480520E29B866520011EFC7 /* VirtualObjectLoader.swift in Sources */,
 				048051C829B85A110011EFC7 /* ViewController.swift in Sources */,
 				048051C429B85A110011EFC7 /* AppDelegate.swift in Sources */,
+				0480520029B866150011EFC7 /* ThresholdPanGesture.swift in Sources */,
+				0480520529B8661D0011EFC7 /* VirtualObjectInteraction.swift in Sources */,
+				0480520929B866340011EFC7 /* FocusSquare.swift in Sources */,
+				0480520A29B866340011EFC7 /* FocusSquareSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +507,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4D524VJZX3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -444,6 +517,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,6 +538,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4D524VJZX3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -473,6 +548,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
